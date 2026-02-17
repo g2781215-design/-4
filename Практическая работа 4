@@ -1,12 +1,12 @@
 using System;
 
-// Document интерфейсі
+
 public interface IDocument
 {
     void Open();
 }
 
-// Нақты құжаттар
+
 public class Report : IDocument
 {
     public void Open()
@@ -39,7 +39,7 @@ public class Invoice : IDocument
     }
 }
 
-// Абстрактты фабрика
+
 public abstract class DocumentCreator
 {
     public abstract IDocument CreateDocument();
@@ -51,7 +51,7 @@ public abstract class DocumentCreator
     }
 }
 
-// Нақты фабрикалар
+
 public class ReportCreator : DocumentCreator
 {
     public override IDocument CreateDocument()
